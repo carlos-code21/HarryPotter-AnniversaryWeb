@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Anniversary</title>
+    <meta
+      name="description"
+      content="Un sitio web romántico y mágico con temática de Harry Potter para celebrar nuestro aniversario."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="crest">⚡</span>
+        <span>Magic Anniversary</span>
+      </div>
+      <nav>
+        <a href="#story">Nuestra historia</a>
+        <a href="#houses">Casas</a>
+        <a href="#moments">Momentos</a>
+        <a href="#letter">Carta</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Para mi amor</p>
+          <h1>En este reino mágico, <span>te elegiría una y otra vez.</span></h1>
+          <p class="intro">
+            Cada día contigo se siente como entrar en una historia que nadie quiere que termine.
+            Gracias por ser mi hogar, mi aventura y mi mayor fortuna.
+          </p>
+
+          <div class="cta-row">
+            <a class="button primary" href="#letter">Leer mi carta</a>
+            <button class="button secondary" id="sortButton">Ordena mi corazón</button>
+          </div>
+
+          <div class="mini-badges">
+            <span>✨ Amor verdadero</span>
+            <span>🪄 Magia real</span>
+            <span>💫 Eternidad</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="magic-card main-card">
+            <div class="card-top">
+              <span class="tag">Poción de amor</span>
+              <span class="icon">🦉</span>
+            </div>
+            <h2>Mi historia favorita</h2>
+            <p>
+              Se llama “nosotros” y es la aventura más bonita que jamás me hubiese imaginado.
+            </p>
+            <div class="stat-row">
+              <div>
+                <strong>01</strong>
+                <span>Primera sonrisa</span>
+              </div>
+              <div>
+                <strong>∞</strong>
+                <span>Momentos mágicos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-note note-1">¡Te amo! 💖</div>
+          <div class="floating-note note-2">Siempre juntos ✨</div>
+        </div>
+      </section>
+
+      <section class="section" id="story">
+        <div class="section-heading">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2>Una historia con hechizos, risas y amor.</h2>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-box">
+            <span class="number">01</span>
+            <h3>Tu mirada</h3>
+            <p>Un pequeño brillo que hizo que el mundo se viera más bonito.</p>
+          </article>
+          <article class="story-box">
+            <span class="number">02</span>
+            <h3>Nuestra química</h3>
+            <p>Como una varita que siempre encuentra el camino correcto hacia el corazón.</p>
+          </article>
+          <article class="story-box">
+            <span class="number">03</span>
+            <h3>El futuro</h3>
+            <p>Un camino lleno de sueños compartidos, magia y recuerdos para siempre.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="houses">
+        <div class="section-heading">
+          <p class="eyebrow">Las casas</p>
+          <h2>Si el sombrero pudiera elegirnos, nos diría:</h2>
+        </div>
+
+        <div class="houses-grid" id="housesGrid"></div>
+      </section>
+
+      <section class="section" id="moments">
+        <div class="section-heading">
+          <p class="eyebrow">Momentos mágicos</p>
+          <h2>Pequeños encantamientos que guardo en mi corazón.</h2>
+        </div>
+
+        <div class="moments-grid" id="momentsGrid"></div>
+      </section>
+
+      <section class="section spellbook" id="letter">
+        <div class="section-heading">
+          <p class="eyebrow">Carta del corazón</p>
+          <h2>Si el mundo fuera un libro de hechizos, tú serías mi capítulo favorito.</h2>
+        </div>
+
+        <div class="letter-card">
+          <div class="letter-header">
+            <span>De: Tu amor</span>
+            <span>Para: Mi persona favorita</span>
+          </div>
+          <p>
+            Querida mía, hoy quiero recordarte lo especial que eres para mí. En cada momento contigo,
+            siento que la vida me regala un pequeño hechizo de felicidad. Tu sonrisa ilumina mis días,
+            tu compañía me hace sentir en casa y tu amor convierte lo cotidiano en algo inolvidable.
+          </p>
+          <p>
+            Gracias por ser mi compañero en esta aventura, por escucharme, por apoyarme y por hacerme
+            sentir amado cada día. Si pudiera elegir una casa, te elegiría a ti una y otra vez. Eres mi
+            mayor tesoro y mi mayor suerte.
+          </p>
+          <p class="signature">Con todo mi amor, para siempre ✨</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Hecho con magia, cariño y un poco de Hogwarts 🪄💖</p>
+    </footer>
+
+    <div class="sorting-hat" id="sortingHat">
+      <div class="hat-card">
+        <p class="hat-label">Sombrero seleccionador</p>
+        <h3 id="hatResult">Te pertenece la casa...</h3>
+        <button class="button primary" id="revealHouse">Descubrir</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
