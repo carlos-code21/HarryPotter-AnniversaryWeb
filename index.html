@@ -1,169 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic Anniversary</title>
-    <meta
-      name="description"
-      content="Un sitio web romántico y mágico con temática de Harry Potter para celebrar nuestro aniversario."
-    />
+    <title>Mi Amor, Mi Magia - Anniversary</title>
+    <meta name="description" content="Un sitio web romántico y mágico con temática de Harry Potter para celebrar nuestro aniversario." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="stars"></div>
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="magic-bg">
+        <div class="stars"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="floating-spell" style="--delay: 0s;"></div>
+        <div class="floating-spell" style="--delay: 2s;"></div>
+        <div class="floating-spell" style="--delay: 4s;"></div>
+    </div>
+
+    <button class="music-toggle" id="musicToggle" title="Activar música mágica">
+        <span class="music-icon">🔊</span>
+    </button>
 
     <header class="topbar">
-      <div class="brand">
-        <span class="crest">⚡</span>
-        <span>Magic Anniversary</span>
-      </div>
-      <nav>
-        <a href="#story">Nuestra historia</a>
-        <a href="#houses">Casas</a>
-        <a href="#moments">Momentos</a>
-        <a href="#letter">Carta</a>
-      </nav>
+        <div class="brand">
+            <span class="crest">⚡</span>
+            <span>Mi Amor, Mi Magia</span>
+        </div>
+        <nav>
+            <a href="#story">Nuestra Historia</a>
+            <a href="#journey">Nuestro Viaje</a>
+            <a href="#letter">Carta Mágica</a>
+            <a href="#gallery">Recuerdos</a>
+        </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Para mi amor</p>
-          <h1>En este reino mágico, <span>te elegiría una y otra vez.</span></h1>
-          <p class="intro">
-            Cada día contigo se siente como entrar en una historia que nadie quiere que termine.
-            Gracias por ser mi hogar, mi aventura y mi mayor fortuna.
-          </p>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Para mi amor</p>
+                    <h1>En este reino mágico, <span>te elegiría una y otra vez.</span></h1>
+                    <p class="intro">
+                        Cada día contigo se siente como entrar en una historia que nadie quiere que termine. 
+                        Eres mi hogar, mi aventura y mi mayor fortuna. Gracias por hacer que la vida sea más hermosa.
+                    </p>
+                    
+                    <div class="cta-row">
+                        <a class="button primary" href="#letter">Leer mi Carta</a>
+                        <button class="button secondary" id="sortButton">Ordena Mi Corazón</button>
+                    </div>
 
-          <div class="cta-row">
-            <a class="button primary" href="#letter">Leer mi carta</a>
-            <button class="button secondary" id="sortButton">Ordena mi corazón</button>
-          </div>
+                    <div class="mini-badges">
+                        <span>💫 Amor Verdadero</span>
+                        <span>🪄 Magia Real</span>
+                        <span>💬 Eternidad</span>
+                    </div>
+                </div>
 
-          <div class="mini-badges">
-            <span>✨ Amor verdadero</span>
-            <span>🪄 Magia real</span>
-            <span>💫 Eternidad</span>
-          </div>
-        </div>
+                <div class="hero-visual">
+                    <div class="magic-card main-card">
+                        <div class="card-shine"></div>
+                        <div class="card-top">
+                            <span class="tag">Poción de Amor</span>
+                            <span class="icon">🧪</span>
+                        </div>
+                        <h2>Mi Historia Favorita</h2>
+                        <p>Se llama "nosotros" y es la aventura más bonita que jamás me hubiese imaginado.</p>
+                        <div class="stat-row">
+                            <div>
+                                <strong>01</strong>
+                                <span>Primera Sonrisa</span>
+                            </div>
+                            <div>
+                                <strong>∞</strong>
+                                <span>Momentos Mágicos</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="hero-visual">
-          <div class="magic-card main-card">
-            <div class="card-top">
-              <span class="tag">Poción de amor</span>
-              <span class="icon">🦉</span>
+                    <div class="floating-note note-1">¡Te amo! 💖</div>
+                    <div class="floating-note note-2">Siempre juntos ✨</div>
+                    <div class="wand-cursor"></div>
+                </div>
             </div>
-            <h2>Mi historia favorita</h2>
-            <p>
-              Se llama “nosotros” y es la aventura más bonita que jamás me hubiese imaginado.
-            </p>
-            <div class="stat-row">
-              <div>
-                <strong>01</strong>
-                <span>Primera sonrisa</span>
-              </div>
-              <div>
-                <strong>∞</strong>
-                <span>Momentos mágicos</span>
-              </div>
+        </section>
+
+        <section class="section" id="story">
+            <div class="section-bg"></div>
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Nuestra Historia</p>
+                    <h2>Una historia con hechizos, risas y un amor sin fin.</h2>
+                </div>
+
+                <div class="story-grid">
+                    <article class="story-box">
+                        <span class="story-number">01</span>
+                        <h3>Tu Mirada</h3>
+                        <p>Un pequeño brillo en tus ojos que hizo que el mundo entero se viera más bonito y lleno de promesas.</p>
+                        <div class="story-emoji">✨</div>
+                    </article>
+                    <article class="story-box">
+                        <span class="story-number">02</span>
+                        <h3>Nuestra Química</h3>
+                        <p>Como una varita que siempre encuentra el camino correcto, tu amor ha iluminado cada rincón de mi ser.</p>
+                        <div class="story-emoji">🪄</div>
+                    </article>
+                    <article class="story-box">
+                        <span class="story-number">03</span>
+                        <h3>El Futuro</h3>
+                        <p>Un camino lleno de sueños compartidos, magia y recuerdos que guardaré por toda la eternidad.</p>
+                        <div class="story-emoji">💕</div>
+                    </article>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="floating-note note-1">¡Te amo! 💖</div>
-          <div class="floating-note note-2">Siempre juntos ✨</div>
-        </div>
-      </section>
+        <section class="section" id="houses">
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Las Casas de Hogwarts</p>
+                    <h2>Si el sombrero pudiera elegirnos, nos diría:</h2>
+                </div>
+                <div class="houses-grid" id="housesGrid"></div>
+            </div>
+        </section>
 
-      <section class="section" id="story">
-        <div class="section-heading">
-          <p class="eyebrow">Nuestra historia</p>
-          <h2>Una historia con hechizos, risas y amor.</h2>
-        </div>
+        <section class="section journey-section" id="journey">
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Nuestro Viaje Mágico</p>
+                    <h2>Cada momento, una página en nuestro libro de hechizos.</h2>
+                </div>
+                <div class="journey-timeline" id="journeyTimeline"></div>
+            </div>
+        </section>
 
-        <div class="story-grid">
-          <article class="story-box">
-            <span class="number">01</span>
-            <h3>Tu mirada</h3>
-            <p>Un pequeño brillo que hizo que el mundo se viera más bonito.</p>
-          </article>
-          <article class="story-box">
-            <span class="number">02</span>
-            <h3>Nuestra química</h3>
-            <p>Como una varita que siempre encuentra el camino correcto hacia el corazón.</p>
-          </article>
-          <article class="story-box">
-            <span class="number">03</span>
-            <h3>El futuro</h3>
-            <p>Un camino lleno de sueños compartidos, magia y recuerdos para siempre.</p>
-          </article>
-        </div>
-      </section>
+        <section class="section moments-section">
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Momentos Mágicos</p>
+                    <h2>Pequeños encantamientos que guardo en mi corazón.</h2>
+                </div>
+                <div class="moments-grid" id="momentsGrid"></div>
+            </div>
+        </section>
 
-      <section class="section" id="houses">
-        <div class="section-heading">
-          <p class="eyebrow">Las casas</p>
-          <h2>Si el sombrero pudiera elegirnos, nos diría:</h2>
-        </div>
+        <section class="section gallery-section" id="gallery">
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Galería de Recuerdos</p>
+                    <h2>Nuestros momentos, capturados en la magia del tiempo.</h2>
+                </div>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </section>
 
-        <div class="houses-grid" id="housesGrid"></div>
-      </section>
+        <section class="section letter-section" id="letter">
+            <div class="section-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Carta del Corazón</p>
+                    <h2>Una carta escrita con magia y amor infinito.</h2>
+                </div>
 
-      <section class="section" id="moments">
-        <div class="section-heading">
-          <p class="eyebrow">Momentos mágicos</p>
-          <h2>Pequeños encantamientos que guardo en mi corazón.</h2>
-        </div>
+                <div class="letter-container">
+                    <div class="letter-card premium">
+                        <div class="letter-seal">
+                            <div class="seal-wax">⚡</div>
+                        </div>
+                        
+                        <div class="letter-header">
+                            <div class="header-line">
+                                <span class="from">De: Tu amor</span>
+                                <span class="date" id="letterDate"></span>
+                            </div>
+                            <div class="header-line">
+                                <span class="to">Para: Mi persona favorita en todo el universo</span>
+                            </div>
+                        </div>
 
-        <div class="moments-grid" id="momentsGrid"></div>
-      </section>
+                        <div class="letter-content">
+                            <p class="greeting">Mi Queridísima,</p>
+                            
+                            <p>
+                                Hoy quiero recordarte lo especial que eres para mí. En cada momento contigo, 
+                                siento que la vida me regala un pequeño hechizo de felicidad. Tu sonrisa ilumina 
+                                mis días más oscuros, tu compañía me hace sentir en casa y tu amor convierte lo 
+                                cotidiano en algo inolvidable.
+                            </p>
 
-      <section class="section spellbook" id="letter">
-        <div class="section-heading">
-          <p class="eyebrow">Carta del corazón</p>
-          <h2>Si el mundo fuera un libro de hechizos, tú serías mi capítulo favorito.</h2>
-        </div>
+                            <p>
+                                Cuando te conocí, no sabía que era posible sentir tanta magia en una sola persona. 
+                                Eres como un hechizo que no quiero que se rompa nunca, una poción que me devuelve 
+                                la vida cada vez que la bebo. En ti encuentro todo lo que siempre busqué.
+                            </p>
 
-        <div class="letter-card">
-          <div class="letter-header">
-            <span>De: Tu amor</span>
-            <span>Para: Mi persona favorita</span>
-          </div>
-          <p>
-            Querida mía, hoy quiero recordarte lo especial que eres para mí. En cada momento contigo,
-            siento que la vida me regala un pequeño hechizo de felicidad. Tu sonrisa ilumina mis días,
-            tu compañía me hace sentir en casa y tu amor convierte lo cotidiano en algo inolvidable.
-          </p>
-          <p>
-            Gracias por ser mi compañero en esta aventura, por escucharme, por apoyarme y por hacerme
-            sentir amado cada día. Si pudiera elegir una casa, te elegiría a ti una y otra vez. Eres mi
-            mayor tesoro y mi mayor suerte.
-          </p>
-          <p class="signature">Con todo mi amor, para siempre ✨</p>
-        </div>
-      </section>
+                            <p>
+                                Gracias por ser mi compañero en esta aventura llamada vida. Gracias por escucharme 
+                                sin juzgarme, por apoyarme en mis momentos de debilidad y por hacerme sentir amado 
+                                y valioso cada día. Si pudiera elegir una casa de Hogwarts, te elegiría a ti una 
+                                y otra vez, porque eres más que una casa, eres mi hogar.
+                            </p>
+
+                            <p>
+                                Eres mi mayor tesoro y mi mayor suerte. Cada día contigo es una página en blanco 
+                                que espera ser llenada con los hechizos más hermosos. No importa cuánto tiempo pase, 
+                                mi amor por ti crecerá como las vides del castillo de Hogwarts.
+                            </p>
+
+                            <p>
+                                Prometo amarte con la misma intensidad que un Patronus protege su magia. Prometo 
+                                estar a tu lado en cada hechizo lanzado, en cada batalla ganada y en cada momento 
+                                de paz. Eres mi razón, mi magia y mi eternidad.
+                            </p>
+
+                            <p class="closing">Con todo mi amor y toda mi alma,</p>
+                            <p class="signature">Tu amor infinito 💫</p>
+                        </div>
+
+                        <div class="letter-footer">
+                            <p>P.D. - Te amo más de lo que las palabras pueden expresar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section quotes-section">
+            <div class="section-content">
+                <div class="quotes-container" id="quotesContainer"></div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-      <p>Hecho con magia, cariño y un poco de Hogwarts 🪄💖</p>
+        <div class="footer-content">
+            <p>Hecho con magia, cariño y un poco de Hogwarts 🪄💖</p>
+            <p class="footer-love">Porque contigo, cada día es un hechizo.</p>
+        </div>
     </footer>
 
     <div class="sorting-hat" id="sortingHat">
-      <div class="hat-card">
-        <p class="hat-label">Sombrero seleccionador</p>
-        <h3 id="hatResult">Te pertenece la casa...</h3>
-        <button class="button primary" id="revealHouse">Descubrir</button>
-      </div>
+        <div class="hat-card">
+            <div class="hat-animation">🎩</div>
+            <p class="hat-label">Sombrero Seleccionador</p>
+            <h3 id="hatResult">Pensando...</h3>
+            <p id="hatMessage" class="hat-message"></p>
+            <button class="button primary" id="revealHouse">Descubrir Destino</button>
+        </div>
     </div>
 
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
